@@ -1,1 +1,17 @@
-<p>student works!</p>
+<div>
+    <h2>Students</h2>
+    <ul>
+      <li *ngFor="let student of students">{{ student }}</li>
+    </ul>
+  </div>
+  
+  <div>
+    <h2>Add Student</h2>
+    <label for="studentName">Student Name:</label>
+    <input [(ngModel)]="studentName" type="text" id="studentName" name="studentName" required>
+  
+    <label for="studentId">Student ID:</label>
+    <input [(ngModel)]="studentId" type="text" id="studentId" name="studentId" required>
+  
+    <button (click)="addStudent()">Add Student</button>
+  </div>
